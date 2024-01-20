@@ -1,0 +1,25 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class NumberSets {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int l = s.nextInt();
+
+        print("Even", Set(l, 2));
+        print("Odd", Set(l, 1));
+
+        s.close();
+    }
+
+    private static HashSet<Integer> Set(int l, int s) {
+        HashSet<Integer> set = new HashSet<>();
+        for (int i = s; i <= l; i += 2) set.add(i);
+        return set;
+    }
+
+    private static void print(String l, HashSet<Integer> s) {
+        System.out.printf("%s numbers: %s%n", l, s);
+    }
+}
