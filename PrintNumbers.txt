@@ -3,10 +3,12 @@ import java.util.Scanner;
 
 public class Sets {
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the Number: ");
         int limit = scanner.nextInt();
-		HashSet<Integer> evenSet = new HashSet<>();
+
+        HashSet<Integer> evenSet = new HashSet<>();
         HashSet<Integer> oddSet = new HashSet<>();
         HashSet<Integer> primeSet = new HashSet<>();
 
@@ -25,7 +27,8 @@ public class Sets {
         System.out.println("Even numbers: " + evenSet);
         System.out.println("Odd numbers: " + oddSet);
         System.out.println("Prime numbers: " + primeSet);
-		scanner.close();
+
+        scanner.close();
     }
 
     private static boolean isPrime(int num) {
