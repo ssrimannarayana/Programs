@@ -1,0 +1,32 @@
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def categorize_numbers(number):
+    even_numbers = set()
+    odd_numbers = set()
+    prime_numbers = set()
+
+    for i in range(1, number + 1):
+        if number % i == 0:
+            if i % 2 == 0:
+                even_numbers.add(i)
+            else:
+                odd_numbers.add(i)
+
+            if is_prime(i):
+                prime_numbers.add(i)
+
+    return even_numbers, odd_numbers, prime_numbers
+
+input_number = int(input("Enter a number: "))
+
+even_set, odd_set, prime_set = categorize_numbers(input_number)
+
+print(f"Even numbers: {even_set}")
+print(f"Odd numbers: {odd_set}")
+print(f"Prime numbers: {prime_set}")
