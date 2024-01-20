@@ -1,0 +1,5 @@
+a = input('Enter String: ')
+
+for vowel in 'aeiou':
+    if vowel in a:
+        print(vowel)
